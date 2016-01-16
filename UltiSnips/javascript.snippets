@@ -1,0 +1,128 @@
+#
+#  Babel snippets
+#
+
+snippet rcc "React: class component" b
+import React from 'react'
+
+export default class ${1:ClassName} extends React.Component {
+	render () {
+		return (
+			${VISUAL}$2
+		)
+	}
+}
+$0
+endsnippet
+
+snippet rccl "React: class component (legacy)" b
+import React from 'react'
+
+class ${1:ClassName} extends React.Component {
+	render () {
+		return (
+			${VISUAL}$2
+		)
+	}
+}
+
+export default $1
+$0
+endsnippet
+
+snippet rec "React: only component" b
+class ${1:ClassName} extends React.Component {
+	render () {
+		return ${2:(
+			${3:<div>$0</div>}
+		)}
+	}
+}
+
+endsnippet
+
+snippet cdm "React: componentDidMount() {...}" b
+componentDidMount () {
+	${1}
+}
+$0
+endsnippet
+
+snippet cdup "React: componentDidUpdate(prevProps, prevState) {...}" b
+componentDidUpdate (prevProps, prevState) {
+	${1}
+}
+$0
+endsnippet
+
+snippet cwm "React: componentWillMount() {...}" b
+componentWillMount () {
+	${1}
+}
+$0
+endsnippet
+
+snippet cwr "React: componentWillReceiveProps(nextProps) {...}" b
+componentWillReceiveProps (nextProps) {
+	${1}
+}
+$0
+endsnippet
+
+snippet cwun "React: componentWillUnmount() {...}" b
+componentWillUnmount () {
+	${1}
+}
+$0
+endsnippet
+
+snippet cwup "React: componentWillUpdate (nextProps, nextState) {...}" b
+componentWillUpdate (nextProps, nextState) {
+	${1}
+}
+$0
+endsnippet
+
+snippet fdn "React: React.findDOMNode(...)" b
+React.findDOMNode(${1:this})$0
+endsnippet
+
+snippet gdp "React: getDefaultProps() {...}" b
+getDefaultProps () {
+	${1:return \{${0}\}}
+}
+$0
+endsnippet
+
+snippet gis "React: getInitialState() {...}" b
+getInitialState () {
+	${1:return \{${0}\}}
+}
+$0
+endsnippet
+
+snippet ren "React: render() {...}" b
+render () {
+		return ${1:(
+			${2:<div>$0</div>}
+		)}
+}
+endsnippet
+
+snippet sst "React: this.setState(...)" b
+this.setState(${1:(state, props) => ${0}})
+endsnippet
+
+snippet scu "React: shouldComponentUpdate(nextProps, nextState) {...}" b
+shouldComponentUpdate (nextProps, nextState) {
+	${1:return ${2:false};}${0}
+}
+endsnippet
+
+snippet props "React: this.props" b
+this.props${1:.}
+endsnippet
+
+snippet state "React: this.state" b
+this.state${1:.}
+endsnippet
