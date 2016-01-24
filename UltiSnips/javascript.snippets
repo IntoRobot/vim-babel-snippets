@@ -3,9 +3,9 @@
 #
 
 snippet rcc "React: class component" b
-import React from 'react'
+import React, { Component, PropType } from 'react'
 
-export default class ${1:ClassName} extends React.Component {
+export default class ${1:ClassName} extends Component {
 	render () {
 		return (
 			${VISUAL}$2
@@ -16,9 +16,9 @@ $0
 endsnippet
 
 snippet rccl "React: class component (legacy)" b
-import React from 'react'
+import React, { Component, PropType } from 'react'
 
-class ${1:ClassName} extends React.Component {
+class ${1:ClassName} extends Component {
 	render () {
 		return (
 			${VISUAL}$2
@@ -31,10 +31,10 @@ $0
 endsnippet
 
 snippet rec "React: only component" b
-class ${1:ClassName} extends React.Component {
+class ${1:ClassName} extends ${2:React.}Component {
 	render () {
-		return ${2:(
-			${3:<div>$0</div>}
+		return ${3:(
+			${4:<div>$0</div>}
 		)}
 	}
 }
@@ -125,4 +125,11 @@ endsnippet
 
 snippet state "React: this.state" b
 this.state${1:.}
+endsnippet
+
+snippet pt "React: propTypes" b
+static propTypes = {
+	$1: $2
+};
+$0
 endsnippet
