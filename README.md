@@ -50,7 +50,7 @@ export default class ClassName extends Component {
 | Trigger  | Content |
 | -------: | ------- |
 | `rcc→`   | class component skeleton |
-| `rccl→`   | legacy component skeleton |
+| `rccl→`  | legacy component skeleton |
 | `cdm→`   | `componentDidMount() {…}` |
 | `cdup→`  | `componentDidUpdate(prevProps, prevState) {…}` |
 | `cwm→`   | `componentWillMount() {…}` |
